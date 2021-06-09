@@ -25,7 +25,7 @@
    * <br >
    * <br >
 5. Concept and Operation <br >
-6
+6. 
 
 If you are a new member of the team and have never used [git version control](http://git-scm.com/) before, we highly recommend that you familiarize yourself with it by reading [this guide](https://github.com/RoboJackets/robocup-firmware/blob/master/doc/Git.md).
 
