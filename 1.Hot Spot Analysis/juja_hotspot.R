@@ -21,14 +21,14 @@ gridded(xy) = TRUE
 
 all <- raster(kernelUD(pts_df, h = "href", grid = xy))
 # plot(juja, border="red", add=T)
-rr <- mask(all, juja)
+rr <- mask(all, juja)   # the mask function clips out the Area of Interest, ie. juja, from the whole geographic extent of the grid
 
 library(RColorBrewer)
-png("hotspotMap.png",width = 750,height = 500)
+png("hotspotMap.png",width = 750,height = 500)   #opening a blank image file
 plot(rr, main = "Hotspot map", col=rev(brewer.pal(n=10, name="RdBu")), legend.args = list(text = 'Gi*'));plot(juja, add=TRUE)
 plot(pts_df, pch = 20,cex = 0.5, add=T)
 
 library(GISTools)
-north.arrow(297000,9885700, 500,lab = "N",col='black')
+north.arrow(297000,9885700, 500,lab = "N",col='black')   
 scalebar(5000, type='bar', divs=2, lonlat = FALSE, below = "meters")
-dev.off()
+dev.off()   #closing the now-written image file
